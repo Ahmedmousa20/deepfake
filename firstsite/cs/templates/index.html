@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <style>
+        ::-webkit-file-upload-button {
+            color: white;
+            background-color: #417690;
+            border-radius: 5px;
+            border: none;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body style="background-color:  #f8f8f8; margin: 0; padding: 0%; text-align: center;">
+    <form method="POST" action="{% url 'getvideoname' %}">
+        {% csrf_token %}
+        <div style="width: 100%; height: 50px; background-color:#417690;">
+            <div style="display: flex; justify-content: space-between;">
+                <h1 style="color: white; font-size: 20px; margin-left: 50px;">Deep Fake Detection</h1>
+                <p style="color: white; margin-right: 50px;">© 2021 DeepFack Mod.</p>
+            </div>
+        </div>
+
+        <div class=" m-auto p-5 "
+            style="background-color: white; border-radius: 5px; width: 350px; height: 300px; border: #D6D8D2 1px solid; margin-top: 100px; margin-left: 450px;">
+            <div style="width: 100%; height: 40px; background-color:#417690; color: white; padding-top: 20px; ">Upload
+                Your
+                Video</div>
+            <div>
+                <input type="file" name="videoName"
+                    style=" border:#D6D8D2 1px solid; border-radius: 5px; width: 75%; height: 40px; margin-top: 80px; margin-bottom: 5px;"
+                    class="form-control w-75 " placeholder="Upload your video">
+            </div>
+            <div
+                style="background-color: #f1f1f1; width:80px; height: 30px; margin: auto; border-radius: 5px; color: #555555; display: flex; align-items: center; justify-content: center;">
+                {{videoname}}</div>
+            <button name="submit"
+                style="border: none; border-radius: 5px; width: 80px;height: 40px; background-color: #417690; color: white; border-radius: 5px; margin-top: 10px;">Submit</button>
+
+        </div>
+    </form>
+
+    <!-- <a href="{% url 'test' %}">click here</a> -->
+
+</body>
+
+</html>
